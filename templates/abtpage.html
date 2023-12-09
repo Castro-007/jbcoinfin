@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'mobilestyle1.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anek+Telugu&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="coin-headernav">
+            <div class="header-img">
+                <img src="{% static 'images/coinerrrrrrr.png' %}" alt="jbcoinfinance logo" title="JBCOINFINANCE">
+                <!-- <h4>JBCOINFINANCE</h4> -->
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{% url "index" %}">Home</a>
+                        <a href="{% url "about" %}">About Us</a>
+                        <a href="#investment-plans">Investment Plans</a>
+                        <a href="#services-div">Services</a>
+                        <a href="#faqs-div">FAQs</a>
+                        <a href="#">Contact Us</a>
+                       <button id="dashsty"><a href="{% url "dashboard" %}"> Dashboard</a></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+       <!-- header ends here -->
+
+       <div class="termscond-cont">
+        <div class="terms-cont">
+            <div class="swedentxt">
+                <h1>About Us</h1>
+                <h3><a href="index.html">Home</a><span>/About Us</span></h3>
+            </div>
+            <div class="swedenimg">
+                <img src="{% static 'images/terms-cont.png' %}" alt="">
+            </div>
+        </div>
+        <div class="body-img">
+            <img src="{% static 'images/abt-page.png' %}" alt="">
+        </div>
+       </div>
+
+       <footer>
+        <div class="footer-cont">
+            <div class="jbcoinpow">
+                <div class="jb-ani animate__animated animate__shakeX animate__slow animate__infinite">
+                    <img  src="images/arwup.png' %}" alt="">
+
+                </div>
+                <a href="index.html"><img src="{% static 'images/jblogoA-dark.png' %}" alt=""></a>
+                <p>Jbcoinfinance is your trusted destination for all things investment-related. Our platform is designed to empower both seasoned investors and newcomers to the world of finance.</p>
+                <img class="rightyani animate__animated animate__rotateOut animate__slow animate__infinite" src="images/bitcoinroll.png" alt="">
+                </p>
+            </div>
+            <div class="jbcoinlnks">
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Investment Plans</a></li>
+                        <li><a href="">FAQs</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                    </ul>
+                    <div class="footservice animate__animated animate__shakeY animate__slow animate__infinite">
+                        <img src="{% static 'images/bitcoindig-removebg-preview.png' %}" alt="">
+
+                        
+                    </div>
+                    <p class=" mb-0">© 2023 All Rights Reserved By Jbcoinfinance
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

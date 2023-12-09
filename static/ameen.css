@@ -1,0 +1,449 @@
+:root{
+    --blue:#0d6efd;
+    --bg-gray:#d1d1d1;
+    --links:hsl(221, 87%, 64%);
+    --link-bg:hsl(224 40% 27%);
+}
+
+@font-face {
+    font-family: maven;
+    src: url(Maven_Pro/MavenPro-VariableFont_wght.ttf);
+}
+
+a{
+    text-decoration: none;
+    color: var(--blue);
+}
+
+body{
+    font-family: maven;
+    background-color: #e7e5e5;
+    margin: 0;
+    padding: 0;
+}
+
+i{
+    font-size: 12px;
+}
+
+h2,h3{
+    padding-left: 10px;
+    font-weight:500;
+}
+
+div{
+    margin-bottom: 20px;
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+header span{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+marquee{
+    top: 0;
+    padding: 20px;
+    z-index: 2;
+    border-bottom: 1px solid var(--bg-gray);
+}
+
+.transact a{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#deposit{
+    background-color: var(--blue);
+    color: #fff;
+}
+
+#withdraw{
+    color: #fff;
+    background-color: hsl(224 40% 27%);
+}
+
+.profile_info{
+    margin: 50px 15px;
+}
+
+.menu_list #sec_menu li{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.menu_list{
+    position: fixed;
+    margin: 0;
+    /* top:40px ; */
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.menu_list #sec_menu li a{
+    color: hsl(223 22% 41%);
+}
+
+.menu_list #sec_menu li:active,.menu_list #sec_menu li:hover{
+    padding: 5px;
+    border-radius: 30px;
+    color: hsl(221 84% 66%);
+    background-color: rgba(95, 142, 241, 0.1);;
+}
+
+.menu_list #sec_menu a:active,.menu_list #sec_menu a:hover{
+    color: hsl(221 84% 66%);
+
+}
+
+
+.username,.username span{
+    font-size: 13px;
+    display: flex;
+    flex-flow: column;
+}
+
+.auth{
+    display: flex;
+    align-items: center;
+    border: 1px solid orange;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.kyc{
+    display: flex;
+    align-items: center;
+    border: 1px solid hsl(200 90% 53%);
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.deposits,.withdrawals,.investments{
+    border-left: 2px solid var(--blue);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.widgets{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.chart{
+    display: flex;
+    flex-flow: column;
+    gap: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 5px black;
+}
+
+
+.cookies{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: var(--bg-gray);
+    font-family: Maven;
+    line-height: 1.6rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.cookies p{
+    text-align: center;
+}
+
+.cookies button{
+    color: white;
+    font-size: 1rem;
+    background-color: var(--blue);
+    border: none;
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+
+
+footer{
+    position: relative;
+}
+
+
+.deposits,.withdrawals,.investments{
+    /* padding: 0 30px; */
+    min-width: 270px;
+}
+
+
+     /* INVESTMENT PAGE */
+main{
+    color: #525f80;    
+    box-sizing: border-box;
+    background-color: var(--bg-gray);
+}
+
+.inv_row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.inv_row div{
+    border-radius: 5px;
+    padding:2px 20px;
+    background-color: #fff;
+}
+
+.inv_card_1{
+    display: flex;
+    flex-flow: column;
+    gap: 50%;
+}
+
+.inv_info{
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row;
+}
+
+.inv_info span{
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.inv_links{
+    flex-wrap: wrap ;
+}
+
+#inv_invest{
+    color: #fff;
+    background-color: var(--links);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+#inv_withdraw{
+    background-color: hsl(224 40% 27%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.inv_active{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+/* deposit.css */
+
+
+
+
+.dep_content form{
+    display: flex;
+    flex-flow: column;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 60%;
+    z-index: 0;
+    position: relative;
+}
+
+.form{
+    position: relative;
+}
+
+.form a{
+    margin-left: 70%;
+    background-color: var(--link-bg);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.dep_content form input,select{
+    padding: 0.5rem;
+    margin: 10px 10px;
+    border-radius: 5px;
+    border: 0.1px solid #777;
+    font-family: maven;
+    font-size: large;
+}
+
+.dep_content form input,select:focus{
+    border-color: #0d6efd;
+}
+
+.dep_content form #submit {
+    background-color: hsl(221, 84%, 66%);
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#asterik{
+    color: red;
+}
+
+.amt{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+.amt span{
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+
+}
+
+.amt input{
+    width: 70%;
+}
+
+
+s
+/* withdraw.css */
+
+
+
+#info{
+    font-size: 0.9rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+   /* transfer balance.css */
+
+
+.form .result{
+    font-size: 0.7rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    padding-left: 1rem;
+}
+
+
+
+        /* MEDIA QUERY */
+
+@media all and (min-width:992px) {
+    .notif{
+        width: 33%;
+        display: flex;
+        flex-flow: row;
+        gap: 20px;
+        margin: 0 10px;
+    }
+
+    .menu_list{
+        width: 300px;  
+        left: 0;
+        top: 0;
+        overflow-y: auto;
+        z-index: 10;
+    }
+
+    .wrapper{
+        display: flex;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    main {
+        width: calc(100% - 310px);
+        margin-left: auto;
+      }
+
+
+    header{
+        position:sticky;
+        top: 0;
+    }
+    
+    header span{
+        display: none;
+    }
+    .roi,.auth,.kyc{
+        margin-left: 15px;
+    }
+    
+    .cookies{
+        width: 520px;
+        padding: 30px;
+        position: fixed;
+        bottom: 0;
+        left: 20px;
+        z-index: 100;
+        border-radius: 5px;
+        
+    }
+
+  
+}
+
+@media all and (max-width:992px){
+    .inv_row{
+        display: flex;
+        flex-flow: column;
+    }
+
+    .inv_links{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+}

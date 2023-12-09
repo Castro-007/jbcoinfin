@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link rel="stylesheet" href="{% static 'mobilestyle1.css' %}">
+</head>
+
+<body>
+    <marquee behavior="" direction="">this is where the prices will display</marquee>
+    
+    <div class="wrapper">
+    
+    <div class="menu_list" id="sidebar">
+
+        <header>
+            <a href="index.html"> <img src="{% static 'images/logo.png' %}" alt=""></a>
+
+            <span id="times" onclick="closeMenu()">&times;</span>
+
+        </header>
+
+        <div class="profile_info">
+
+            <h3>ACCOUNT BALANCE</h3>
+            
+            <div class="usd_balance" style="color: var(--blue);font-weight: bold;">
+                50.00 USD (Deposit Wallet)
+            </div>
+
+            <div class="btc_balance">
+                0.00 USD (Interest Wallet)
+            </div>
+
+            <div class="transact">
+                <a href="#" id="deposit">Deposit</a>
+
+                <a href="#" id="withdraw">Withdraw</a>
+            </div>
+        </div>
+
+
+
+        <div class="dashmenu">
+            <div class="dash-imgcon">
+                <ul>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/dashboard.png' %}" alt=""><a href="{% url "dashboard" %}">Dashboard</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/investment.png' %}" alt=""><a href="investments.html">Investments</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/wallet.png' %}" alt=""><a href="{% url "create-deposit" %}">Deposit</a></li>
+                    </div>
+                    <!--
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/withdraw.png' %}" alt=""><a href="withdraw.html">Withdraw</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/balance-transfer.png' %}" alt=""><a href="transfer_balance.html">Transfer Balance</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/transaction.png' %}" alt=""><a href="transactions.html">Transactions</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/referral.png' %}" alt=""><a href="referral.html">Referrals</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/ticket.png' %}" alt=""><a href="supportticket.html">Support Ticket</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/2fa.png' %}" alt=""><a href="">2FA</a></li>
+                    </div>
+                    -->
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/profile.png' %}" alt=""><a href="profile.html">Profile</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/password.png' %}" alt=""><a href="password.html">Change Password</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/logout.png' %}" alt=""><a href="{% url "logout" %}">Logout</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <main>
+        <header>
+            <div class="menu">
+                <span id="menu" onclick="openMenu()">&#9776;</span>
+            </div>
+    
+            <h2>{{ user.username}} Dashboard</h2>
+            
+            <div class="username">
+                <p>Hello {{ user.username }}</p>
+                <i class="fa-solid fa-circle-user fa-2xl" style="color: #3371db;"></i>
+            </div>
+        </header>
+<!-- dashboard ends here -->
+
+
+        <div class="dep_content">
+            
+            <h1 class="dep-firsttxt">Deposit Funds</h1>
+
+            <p>
+                Add funds using our system's gateway. The deposited amount will be credited to the deposit <br> wallet.
+                 You'll just make investments from this wallet.
+            </p>
+            
+            <div class="form dep-form">
+
+                <a class="dep-historylnk" href="dep-history.html">&leftarrow; Deposit History</a>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <h3 class="getaway">select gateway<span id="asterik">*</span></h3>
+                    
+                    <select name="gateway" id="dep-select">Select gateway
+                        <option value="select one">Select one</option>
+                        <option value="bitcoin" name='bitcoin'>Bitcoin</option>
+                        <option value="ethereum" name='ethereum'>Ethereum</option>
+                    </select>
+
+                    <label for="name" style="margin-top: 5%; margin-left: 2%">Investment Plan</label>
+                    <select class="select-box" id="selecto-box" name="plan">
+                        <option value="starter">Starter Plan - 0.7% per hour for 320 Hours : Min: $1,000 </option>
+                        <option value="silver">Silver Plan - 1.5% per hour for 320 Hours : Min: $10,000</option>
+                        <option value="gold">Gold Plan - 2.10% per hour for 720 Hours : Min: $50,000</option>
+                        <option value="vip">VIP Plan - 2.5% per hour for 720 Hours : Min: $200,000</option>
+                        <option value="vip-platinum">VIP Platinum Plan - 3% per hour for 720 Hours : Min: $500,000</option>
+                    </select>
+
+                    <h3 class="getaway">Amount<span id="asterik">*</span></h3>
+                    
+                    <div class="amt"><input type="number" name="deposit"><span id="usd">USD</span></div>
+
+                    <p class="charge-txt">A charge of $5 is added on every deposit made </p>
+                    <input type="submit" value="Submit" id="submit">
+                    
+                </form>
+
+            </div>
+
+            
+        </div>     
+
+    </main>
+
+</body>
+<script src="{% static 'script.js' %}"></script>
+</html>

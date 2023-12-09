@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link rel="stylesheet" href="{% static 'mobilestyle1.css' %}">
+    <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="loader ">
+        <img src="{% static 'images/coinerrrrrrr.png' %}" alt="">
+    </div>
+
+    <div class="wrapper">
+    
+    <div class="menu_list" id="sidebar">
+
+        <header>
+            <a href="{% url "index" %}"> <img src="{% static 'images/logo.png' %}" alt=""></a>
+
+            <span id="times" onclick="closeMenu()">&times;</span>
+
+        </header>
+
+        <div class="profile_info">
+
+            <h3>ACCOUNT BALANCE</h3>
+            
+            <div class="usd_balance" style="color: var(--blue);font-weight: bold;">
+                {{ total_deposits }} USD (Deposit Wallet)
+            </div>
+
+            <div class="btc_balance">
+                0.00 USD (Interest Wallet)
+            </div>
+
+            <div class="transact">
+                <a href="{% url "create-deposit" %}" id="deposit">Deposit</a>
+
+                <a href="#" id="withdraw" onclick="alert('This function is not available yet!');">Withdraw</a>
+            </div>
+        </div>
+
+
+
+        <div class="dashmenu">
+            <div class="dash-imgcon">
+                <ul>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/dashboard.png' %}" alt=""><a href="#">Dashboard</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/investment.png' %}" alt=""><a href="{% url "investment" %}">Investments</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/wallet.png' %}" alt=""><a href="{% url "create-deposit" %}">Deposit</a></li>
+                    </div>
+                    <!--
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/withdraw.png' %}" alt=""><a href="withdraw.html">Withdraw</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/balance-transfer.png' %}" alt=""><a href="transfer_balance.html">Transfer Balance</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/transaction.png' %}" alt=""><a href="transactions.html">Transactions</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/referral.png' %}" alt=""><a href="referral.html">Referrals</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/ticket.png' %}" alt=""><a href="supportticket.html">Support Ticket</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/2fa.png' %}" alt=""><a href="">2FA</a></li>
+                    </div>
+                    -->
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/profile.png' %}" alt=""><a href="{% url "profile" %}">Profile</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/password.png' %}" alt=""><a href="{% url "change_password" %}">Change Password</a></li>
+                    </div>
+                    <div class="dash-imgcon101">
+                        <li><img src="{% static 'images/logout.png' %}" alt=""><a href="{% url "logout" %}">Logout</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        
+    </div>    
+    
+    <main>
+        <header>
+            <div id="coinmarketcap-widget-marquee" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
+        </header>
+        <header>
+
+            <div class="menu">
+                <span id="menu" onclick="openMenu()">&#9776;</span>
+            </div>
+    
+            <h2>{{ user.username }}'s Dashboard</h2>
+            
+            <div class="username">
+                <p>Hello {{ user.username }}</p>
+                <i class="fa-solid fa-circle-user fa-2xl" style="color: #3371db;"></i>
+            </div>
+        </header>
+
+        {% block content %}
+        
+        {% endblock content %}
+<!-- dashboard ends here -->
+        
+    </div>
+
+        <div class="roi">
+            <h2>Latest ROI Statistics</h2>
+
+            <i>Here is last 30 days statistics of your ROI (Return on Investment)</i>
+
+            <div class="chart">
+
+                <span>5</span>
+                <span>4</span>
+                <span>3</span>
+                <span>2</span>
+                <span>1</span>
+                <span>0 <hr></span>
+
+            </div>
+
+        </div>
+
+        
+    </main>
+
+</div>
+
+
+    <footer>
+        <div class="cookies" id="cookies">
+            <img src="" alt="img">
+
+            <p>We may use cookies or any other tracking technologies 
+                when you visit our website, including any other media 
+                form, mobile website, or mobile application related or 
+                connected to help customize the Site and improve your 
+                experience. <a href="">learn more</a>
+            </p>
+
+            <button id="allow">Allow</button>
+        </div>
+
+    </footer>
+</body>
+
+<script src="{% static 'script.js' %}"></script>
+</html>

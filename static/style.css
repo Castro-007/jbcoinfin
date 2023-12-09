@@ -1,0 +1,1275 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    
+}
+
+header{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    border-top: 1px solid black;
+    border-bottom: 0.01em solid #e2e7d4;
+}
+
+.coin-headernav{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.menu {
+    height: 0;
+    width: 300px;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.menu,.content{
+    display: none;
+}
+
+menu:hover{
+    text-decoration: underline;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 15px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: #555;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu_list{
+    position: fixed;
+    margin: 0;
+    /* top:40px ; */
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.menu_list #sec_menu li a{
+    color: hsl(223 22% 41%);
+}
+
+.menu_list #sec_menu li:active,.menu_list #sec_menu li:hover{
+    padding: 5px;
+    border-radius: 30px;
+    transition: 0.3s;
+    color: hsl(221 84% 66%);
+    background-color: rgba(95, 142, 241, 0.1);;
+}
+
+.menu_list #sec_menu a:active,.menu_list #sec_menu a:hover{
+    color: hsl(221 84% 66%);
+
+}
+
+/* LOADING EFFECT */
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: opacity 2s, visibility 1s;
+    z-index: 999;
+}
+
+.loader--hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.loader img{
+    width: 18rem;
+  position: relative;
+  top: 30px;
+  display: inline-block;
+  animation: move 0.5s ease-in-out infinite alternate;
+  z-index: 999;
+}
+
+@keyframes move{
+    0%{
+        margin-top: 300px;
+    }
+    100%{
+        margin-top: 0px;
+    }
+}
+
+
+.username,.username span{
+    font-size: 13px;
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    margin-top: 20px;
+}
+
+
+.header-img img{
+    width: 160px;
+    margin-top: 20px;
+}
+
+header nav ul li {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   gap: 40px;
+   list-style-type: none;
+   margin-top: 60px;
+   font-size: 17px;
+   font-family: 'open sans';
+
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+#dashsty{
+  padding: 16px 28px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #000;
+  background-color: #00D094;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  min-width: 120px;
+  min-height: 44px;
+}
+
+#dashsty:hover{
+    background-color: #00D094;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-3px);
+  background-position: right top
+}
+
+#dashsty:active{
+    transform: translateY(-1px);
+}
+
+#dashsty:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+  }
+
+@media (prefers-reduced-motion: reduce) {
+  #dashsty {
+    transition: linear;
+  }
+}
+
+.triple-cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.minimum{
+    flex-basis: 30%;
+    --animate-duration: 10s;
+    margin-left: 30px;
+}
+.minimum h1{
+    font-size: 49px;
+    font-family:'Anek Telugu', sans-serif; 
+    font-weight: 700;
+    line-height: 1.2em;
+    padding-top: 20px;
+}
+.minimum p{
+    font-size:18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    line-height: 2em;
+    opacity: 0.6;
+    padding-bottom: 50px;
+}
+
+@media (min-width: 576px){
+.minimum button{
+    padding: 16px 28px;
+}
+}
+
+.minimum button{
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #000;
+  background-color: #00D094;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  min-width: 120px;
+  min-height: 44px;
+  letter-spacing: 0.5px;
+}
+
+
+
+.minimum button:hover{
+  background-color: #00D094;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-3px);
+  background-position: right top;
+}
+.minimum button a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    word-spacing: 1px;
+}
+
+.mini-ani{
+    display: flex;
+    gap: 210px;
+    opacity: 0.6;
+}
+
+
+
+.mini-ani:nth-child(2){
+    --animate-duration: 0.5s;
+    
+}
+
+.medium{
+/* here we have to make the background color display column */
+    border-style: none;
+    flex-basis: 30%;
+    --animate-duration: 10s;
+}
+
+.medium .larry img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    /* background-color: #00D094; */
+}
+
+.maximum{
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    --animate-duration: 10s;
+}
+
+.right-card{
+    background-color: #fff;
+    padding: 22px;
+    margin: 0px 0px 32px;
+    border-radius: 8px;
+    border: 2px solid rgba(31, 35, 61, 0);
+    box-shadow: 0px 16px 64px 0px rgba(0, 208, 148, 0.12);
+}
+
+.right-card h3{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+    padding-right: 20px;
+}
+
+.right-card h4{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+@media (min-width: 768px){
+    .right-card{
+        padding: 26px;
+        padding-right: 22px;
+    }
+}
+
+.features{
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+    text-align: center;
+    background-color: #00150f;
+    width: 100%;
+}
+
+.featcoin{
+    padding: 30px;
+}
+
+.featcoin h1{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 45px;
+    color: #ffffff;
+    font-weight: 900;
+    line-height: 1.2em;
+    
+}
+
+.featcoin p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 2em;
+    opacity: 0.6;
+    margin: 0px 0px 16px;
+}
+
+.featcoin img{
+    /* overflow-clip-margin: content-box;
+    overflow: clip; */
+    /* margin-right: 280px; */
+    float: left;
+    
+}
+
+.fur-feat{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+   
+    
+}
+
+.furfeat-con{
+ text-align: center;   
+ width: 250px;
+ height: 374px;
+ margin: 0 auto;
+ background-color: #F8FBFE;
+ border-radius: 8px;
+ z-index: 1;
+ margin: 0px 0px 24px;
+ padding-left:5px ;
+ padding-right:5px ;
+ transition: 0.6s;
+ cursor: pointer;
+ word-wrap: break-word;
+}
+
+.furfeat-con:hover{
+    transform:translateY(-15px) ;
+    
+}
+
+.furfeat-con h5{
+    font-family:'Anek Telugu', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: #0c262a;
+}
+
+.furfeat-con p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #6b777f
+}
+
+.furfeat3{
+    width: 330px;
+    height: 394px;
+}
+
+
+.platform-know{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.platwel-img{
+    flex-basis: 40%;
+    position: relative;
+      width: 1900px; 
+      height: 400px;
+}
+
+.platwel-first{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.platwel-secnd{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 30%;
+    object-fit: contain;
+    z-index: 1; /* Ensure the top image is above the bottom image */
+    border-radius: 20px;
+    
+}
+
+.platoon{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    object-fit: contain;
+    z-index: 1; 
+    float: right;
+}
+
+.platwel-secnd-cont{
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 100px 9.126px 9.126px 100px;
+    /* background: var(--wh-color); */
+    box-shadow: -24px 24px 73.0064086914px 0px rgba(0, 208, 148, 0.16);
+}
+
+.platform-wel{
+    flex-basis: 50%;
+    text-align: left;
+    --animate-duration: 10s;
+    
+}
+
+.aniplat{
+    opacity: 0.6;
+}
+
+.platform-wel h2{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 52px;
+    font-weight: 300px;
+    line-height: 1.2em;
+    color: #0c262a;
+}
+
+.platform-wel p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #6b777f;
+}
+
+.platform-wel button {
+    font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #000;
+  background-color: #00D094;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  min-width: 120px;
+  min-height: 44px;
+  letter-spacing: 0.5px;
+  margin-top: 30px;
+}
+
+.platform-wel button:hover {
+    background-color: #00D094;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    transform: translateY(-3px);
+    background-position: right top;
+}
+
+.platform-wel button a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    word-spacing: 1px;
+}
+
+@media (min-width: 576px){
+    .platform-wel button{
+        padding: 16px 32px;
+    }
+    }
+
+.commit-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.commit-check ul li{
+    list-style: none;
+    margin-bottom: 10px;
+    
+}
+
+.commit-check ul li img{
+    width: 20px;
+    align-content: flex-start;
+    
+}
+
+.commit-check ul li p{
+    display: inline-block;
+    padding: 5px 0 0 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.5em;
+    color: #0c262a
+}
+
+.commit-check h2{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 52px;
+    font-weight: 300px;
+    line-height: 1.2em;
+    color: #0c262a;
+}
+
+.services{
+    background-color: #f1f4fb;
+}
+
+.services101{
+    text-align: center;
+}
+
+.services101 h2{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 52px;
+    font-weight: 300px;
+    line-height: 1.2em;
+    color: #0c262a;
+    padding-top: 20px;
+}
+
+.green-serv{
+    color: #00d094;
+}
+
+.services101 p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #6b777f;
+}
+
+.leftservice{
+    --animate-duration: 10s;
+    margin: 40px 0px 0px 50px ;
+    z-index: 1;
+}
+
+.offermore{
+    display: grid;
+    grid-template-columns: auto auto auto  ;
+    grid-gap: 30px;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 97%;
+}
+
+
+
+.offer-cont{
+    text-align: center;   
+ width: 310px;
+ height: 364px;
+ margin: 0 auto;
+ background-color: #F8FBFE;
+ border-radius: 8px;
+ z-index: 1;
+ margin: 0px 0px 24px;
+ padding: 20px;
+ padding-top: 30px;
+ transition: 0.6s;
+ cursor: pointer;
+ word-wrap: break-word;
+ line-height: 2rem;
+}
+
+.offer-cont a{
+    text-decoration: none;
+    color: black
+}
+
+.offer-cont h3{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: #0c262a;
+}
+
+.offer-cont p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #6b777f;
+}
+
+.offer-cont:hover{
+    background-color: #00D094;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    transform: translateY(-7px);
+    /* background-position: right top; */
+}
+
+.rightani{
+    --animate-duration: 5s;
+    /* margin-left: 1200px; */
+    margin-bottom: 30px;
+    width: 60px;
+}
+
+.invesst{
+    background-color: #F8FBFE;
+}
+
+.invesst101{
+    text-align: center;
+    align-items: center;
+}
+
+.invesst101 h2{
+    padding-top: 30px;
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 52px;
+    font-weight: 300px;
+    line-height: 1em;
+    color: #0c262a;
+}
+
+.blue-vest{
+    color: #0A4FD5;
+}
+
+.invesst101 p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #6b777f;
+    padding-bottom: 30px;
+}
+
+.leftinves{
+    width: 110px;
+    --animate-duration: 10s;
+    margin: 40px 0px 0px 150px ;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.invesst102{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.invest-plans ul li img{
+    width: 20px;
+    text-align: center;
+    align-content: flex-start;
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+.invest-plans h3{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: #0c262a;
+}
+
+.invest-plans p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: #6b777f;
+    margin-left: 50px;
+}
+
+.invest-plans ul li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #6b777f;
+    padding-bottom: 10px;
+    padding-left: 40px;
+}
+
+.invest-plans{
+ text-align: center;   
+ width: 350px;
+ height: 364px;
+ margin: 0 auto;
+ background-color: #fff;
+ border: 2px solid transparent;
+ box-shadow: 0px 16px 40px 0px rgba(26, 64, 137, 0.06);
+ border-radius: 16px;
+ z-index: 1;
+ margin: 0px 0px 24px;
+ padding: 20px;
+ padding-top: 30px;
+ transition: 0.5s;
+ line-height: 2rem;
+ 
+}
+
+.invest-plans >a >button{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid #00D094;
+    padding: 15px 120px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color:#fff ;
+    transition: 0.3s;
+}
+
+.invest-plans >a >button:hover{
+    background-color: #00D094;
+}
+
+.invest-plans:hover{
+    border: 2px solid #00D094;
+}
+
+.return-start{
+    color: #0A4FD5;
+    font-size: 28px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.silver{
+      border: 2px solid #00D094;
+}
+
+.profit-cont{
+    display: flex;
+    gap: 20px;
+    justify-content: space-;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-content: flex-start;
+    text-align: left;
+    align-items: center;
+}
+
+.left-profit{
+    flex-basis: 20%;
+    margin-left: 50px;
+}
+
+.left-profit h2, h3{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 43px;
+    font-weight: 300px;
+    line-height: 1.2em;
+    color: #0c262a;
+    text-align: left;
+}
+
+.left-profit h3{
+    font-size: 38px;
+}
+
+
+.profit-span{
+    color: #0A4FD5;
+}
+
+.profit-calc label{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #6b777f;
+    padding: 20px;
+    display: block;
+}
+
+.profit-calc input, select{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #6b777f;
+    padding: 20px 30px 20px 20px;
+    display: block;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 600px;
+}
+
+.slider-cont{
+    background-color: #f1f4fb;
+}
+
+.headslide-txt{
+    text-align: left;
+    margin: 30px 0 0 70px;
+    padding-top: 30px;
+    line-height: 1.1rem;
+}
+
+.headslide-txt h2{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 53px;
+    font-weight: 300px;
+    line-height: 1.2em;
+    color: #0c262a;
+}
+
+.headslide-txt p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #6b777f;
+}
+
+.headslide-txt11{
+    color: #0A4FD5;
+}
+
+
+.chengyy >img{
+    margin-top: 20px;
+    width: 60px;
+    height: 80px;
+    border-radius: 60px;
+}
+
+
+
+.clien-supp{
+    display: flex;
+    gap: 14px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 130vh;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.supp-data{
+    width: 400px;
+    height: 300px;
+    /* border: solid #fff; */
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 30px;
+    overflow: hidden;
+    text-align: left;
+    /* flex-basis: 30%; */
+    transition: 0.3s;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+
+.supp-data:hover{
+    border: 2px solid #00d094 ;
+    transform: translateY(-7px);
+}
+
+.supp-data p:first-child{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #6b777f;
+    padding-bottom: 40px;
+    border-bottom: 0.1px solid #e2e7d4 ;
+    
+}
+
+.supp-img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.supp-img img:last-child{
+    width: 80px;
+    border-radius: 50px;
+}
+
+.supp-img22{
+    display: flex;
+    gap: 10px;
+}
+
+.supp-img img{
+    width: 60px;
+    height: 80px;
+    border-radius: 60px;
+}
+
+.supp-txt h3{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 22px;
+    font-weight: 300px;
+    line-height: 1.2em;
+    color: #0c262a;
+    
+}
+
+.supp-txt{
+    margin-top: 20px;
+}
+
+.supp-txt p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #6b777f;
+    translate: 0 -20px;
+}
+
+.faq-imgs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.frequent1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.frequent1 h2{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 52px;
+    font-weight: 300px;
+    line-height: 1.2em;
+    color: #0c262a;
+}
+
+.frequent1 span{
+    color: #0A4FD5;
+}
+
+.frequent1 p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #6b777f;
+    
+}
+
+.minii-ani{
+    --animate-duration:6s
+}
+
+.faq-crypto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%
+}
+
+.cryptoaskd{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.cryptoaskkk{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+    width: 20%;
+}
+
+
+.cryptoaskd-cont h3{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 20px;
+    font-weight: 300px;
+    line-height: 1.2em;
+    color: #0c262a;
+}
+
+.cryptoaskd-cont p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #6b777f;
+}
+
+.cryptoaskd-cont a{
+    text-decoration: none;
+    color: #00D094;
+}
+
+.footer-cont{
+    background-color: #011028;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    width: 100%;
+}
+
+.jb-ani{
+    --animate-duration: 10s;
+}
+
+.footservice{
+    --animate-duration: 10s
+}
+
+.jbcoinpow{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: center;
+    justify-content: flex-start;
+    flex-basis: 20%;
+    width: 350px;
+    line-height: 1.8rem;
+    margin-top: 30px;
+}
+
+.jbcoinpow p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #ffffff99;
+    line-height: 1.5em;
+}
+
+.jbcoinlnks{
+    flex-basis: 20%;
+}
+
+.footer-links ul li a{
+    text-decoration: none;
+    color: #ffffff99;
+    font-family: 'Open sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5em;
+    transition: 0.3s;
+}
+
+.footer-links h3{
+    font-family: 'Anek Telugu', sans-serif;
+    /* font-size: 22px; */
+    font-weight: 300px;
+    line-height: 1.2em;
+    color: #ffffff99;
+}
+
+.footer-links{
+    margin-top: 30px;
+}
+
+.footer-links ul li{
+    margin: 15px 0;
+    list-style-type: none;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover{
+    color: #00d094;
+    transform:translateX(7px) ;
+}
+
+.footer-links ul li:hover{
+    list-style-type: "👉";
+    color: #00d094;
+    transform:translateX(7px) ;
+}
+
+.rightyani{
+    float: left;
+    --animate-duration: 8s;
+}
+
+
+
+/* term&con page starts here */
+
+
+.terms-cont{
+    background-color: #011028;
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: start;
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+}
+
+.swedenimg img{
+    width: 60%;
+    margin-left: 40px;
+}
+
+.swedentxt{
+    margin-left: 40px;
+}
+.swedentxt h1{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 52px;
+    font-weight: 300px;
+    line-height: 1.2em;
+}
+
+.swedentxt h3{
+    font-size: 28px;
+}
+.swedentxt a{
+    text-decoration: none;
+    color: #00D094;
+}
+
+.swedentxt span{
+    color: #ffffff;
+}
+
+.condition-head h1{
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 52px;
+    font-weight: 300px;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.condition-wrapper p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+.condition-wrapper{
+    margin-left: 30px;
+}
+
+/* abtpage starts here */
+
+.body-img{
+    width: 100%;
+    height: 100%;
+}
+
+.body-img img{
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    margin: 20px 0 20px 80px;
+}
+
+
+
+
+@media all and (max-width:767px) {
+    
+}

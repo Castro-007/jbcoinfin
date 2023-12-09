@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body>
+        <marquee behavior="" direction="">this is where the prices will display</marquee>
+    
+        <div class="wrapper">
+        
+        <div class="menu_list" id="sidebar">
+    
+            <header>
+                <a href="index.html"> <img src="images/logo.png" alt=""></a>
+    
+                <span id="times" onclick="closeMenu()">&times;</span>
+    
+            </header>
+    
+            <div class="profile_info">
+    
+                <h3>ACCOUNT BALANCE</h3>
+                
+                <div class="usd_balance" style="color: var(--blue);font-weight: bold;">
+                    50.00 USD (Deposit Wallet)
+                </div>
+    
+                <div class="btc_balance">
+                    0.00 USD (Interest Wallet)
+                </div>
+    
+                <div class="transact">
+                    <a href="#" id="deposit">Deposit</a>
+    
+                    <a href="#" id="withdraw">Withdraw</a>
+                </div>
+            </div>
+    
+    
+    
+            <div class="dashmenu">
+                <div class="dash-imgcon">
+                    <ul>
+                        <div class="dash-imgcon101">
+                            <li><img src="images/dashboard.png" alt=""><a href="dashboard.html">Dashboard</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="images/investment.png" alt=""><a href="investments.html">Investments</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="images/wallet.png" alt=""><a href="deposit.html">Deposit</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="images/withdraw.png" alt=""><a href="withdraw.html">Withdraw</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="images/balance-transfer.png" alt=""><a href="transfer_balance.html">Transfer Balance</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="images/transaction.png" alt=""><a href="transactions.html">Transactions</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="images/referral.png" alt=""><a href="referral.html">Referrals</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="images/ticket.png" alt=""><a href="supportticket.html">Support Ticket</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="images/2fa.png" alt=""><a href="">2FA</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="images/profile.png" alt=""><a href="profile.html">Profile</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="images/password.png" alt=""><a href="password.html">Change Password</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="images/logout.png" alt=""><a href="">Logout</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    
+    
+    
+    
+        
+        
+        <main>
+            <header>
+                <div class="menu">
+                    <span id="menu" onclick="openMenu()">&#9776;</span>
+                </div>
+        
+                <h2>User Dashboard</h2>
+                
+                <div class="username">
+                    <p>username</p>
+                    <i class="fa-solid fa-circle-user fa-2xl" style="color: #3371db;"></i>
+                </div>
+            </header>
+    <!-- dashboard ends here -->
+
+        <div class="dep_content">
+            <h1>KYC Submission</h1>
+
+            <p>
+                The system requires you to submit KYC (know your client) information.
+                 Your submitted data will be verified by the system\s admin.
+                  If all of your information is correct, the admin will approve the
+                   KYC data and you'll be able to make withdrawal requests and transfer money to other users .
+            </p>
+
+            
+            <div class="form">
+
+
+                <form action="">
+
+                    <h3>Full Name<span id="asterik">*</span></h3>
+                    
+                    <select name="gateway" id="">Select gateway
+                        <option value="select one">Select one</option>
+                        <option value="Bitcoin">Bitcoin</option>
+                        <option value="Ethereum">Ethereum</option>
+                    </select>
+
+                    <h3>ID Number<span id="asterik">*</span></h3>
+                    
+                    <div class="amt"><input type="number"><span id="usd">USD</span></div>
+                    
+                    
+                    <h3>Gender<span id="asterik">*</span></h3>
+                    
+                    <select name="Gender" id="">
+                        <option value="select one">Select one</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    
+                    <h3>ID Photo<span id="asterik">*</span></h3>
+                    
+                    <input type="file" src="" alt="">
+                    
+                    <span id="info" style="color: var(--blue);">Supported format: jpg,jpeg,png,pdf</span>
+                    
+                    <input type="submit" value="Submit" id="submit">
+                    
+                </form>
+
+            </div>
+
+            
+        </div>     
+
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

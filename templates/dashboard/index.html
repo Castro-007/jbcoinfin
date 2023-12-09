@@ -1,0 +1,152 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="auth">
+    <!-- <div class="auth_img">
+        <img src="" alt="img">
+    </div>
+
+    <div class="auth_info">
+        <h3><i class="fa-solid fa-user-lock fa-lg" style="color: #dc7f2e;"></i> 2FA Authentication</h3>
+
+        <p>
+            To keep safe your account, Please enable <i>2FA</i> security.
+             It will make secure your account and balance.
+        </p>
+
+    </div>
+     -->
+</div>
+<!--
+<div class="kyc">
+
+
+    <div class="kyc_info">
+
+        <h3><i class="fa-solid fa-file-pen fa-lg" style="color: #7ba4ea;"></i> KYC Verification Required</h3>
+
+        <p>
+            Please submit the required KYC information to verify yourself.
+             Otherwise, you couldn't make any withdrawal requests to the system.
+              <a href="">Click here</a> to submit KYC information.
+        </p>
+    </div>
+</div>
+-->
+
+<div class="notif">
+
+<div class="deposits">
+    <h4>Successful Deposits</h4>
+
+    <h3>{{ total_successful_deposits }} USD</h3>
+
+    <!--
+    <div class="widgets">
+
+        <div class="col">
+            <h4>Submitted</h4>
+
+            <span>$0.00</span>
+        </div>
+        <div class="col">
+            <h4>Pending</h4>
+
+            <span>$0.00</span>
+            
+        </div>
+
+        <div class="col">
+            
+            <h4>Rejected</h4>
+            
+            <span>$0.00</span>
+        
+        </div>
+    </div>
+    -->
+    <hr>
+
+    <i>You've requested to deposit $1,000.00. Where $1,000.00 is just initiated but not submitted.</i>
+</div>
+
+
+<div class="withdrawals">
+    <h4>Succesful Withdrawals</h4>
+
+    <h3>0.00 USD</h3>
+
+    <!--
+    <div class="widgets">
+
+        <div class="col">
+            <h4>Submitted</h4>
+
+            <span>$0.00</span>
+        </div>
+        <div class="col">
+            <h4>Pending</h4>
+
+            <span>$0.00</span>
+            
+        </div>
+
+        <div class="col">
+            
+            <h4>Rejected</h4>
+            
+            <span>$0.00</span>
+        
+        </div>
+    </div>  
+    -->
+    <hr>
+
+    <i>You've requested to withdraw $0.00.
+         Where $0.00 is just initiated but not submitted.</i>
+</div>
+
+
+<div class="investments">
+    <h4>Total Investments</h4>
+
+    <h3>{{ total_deposits }} USD</h3>
+
+    <!--
+    <div class="widgets">
+
+        <div class="col">
+            <h4>Completed</h4>
+
+            <span>$0.00</span>
+        </div>
+        <div class="col">
+            <h4>Running</h4>
+
+            <span>$0.00</span>
+            
+        </div>
+
+        <div class="col">
+            
+            <h4>Interests</h4>
+            
+            <span>$0.00</span>
+        
+        </div>
+    </div>
+    -->
+    <hr>
+
+    <i>You've requested to withdraw $0.00.
+         Where $0.00 is just initiated but not submitted.</i>
+</div>
+
+
+{% endblock content %}
+
+
+

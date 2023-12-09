@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <marquee behavior="" direction="">this is where the prices will display</marquee>
+    
+    <div class="wrapper">
+    
+        <div class="menu_list" id="sidebar">
+            <header>
+                <div id="coinmarketcap-widget-marquee" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
+            </header>
+            <header>
+                <a href="{% url "index" %}"> <img src="{% static 'images/logo.png' %}" alt=""></a>
+    
+                <span id="times" onclick="closeMenu()">&times;</span>
+    
+            </header>
+    
+            <div class="profile_info">
+
+                <h3>ACCOUNT BALANCE</h3>
+                
+                <div class="usd_balance" style="color: var(--blue);font-weight: bold;">
+                    {{ total_deposits }} USD (Deposit Wallet)
+                </div>
+    
+                <div class="btc_balance">
+                    0.00 USD (Interest Wallet)
+                </div>
+    
+                <div class="transact">
+                    <a href="{% url "create-deposit" %}" id="deposit">Deposit</a>
+    
+                    <a href="#" id="withdraw" onclick="alert('This function is not available yet!');">Withdraw</a>
+                </div>
+            </div>
+    
+    
+    
+            <div class="dashmenu">
+                <div class="dash-imgcon">
+                    <ul>
+                        <div class="dash-imgcon101">
+                            <li><img src="{% static 'images/dashboard.png' %}" alt=""><a href="{% url "dashboard" %}">Dashboard</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="{% static 'images/investment.png' %}" alt=""><a href="{% url "investment" %}">Investments</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="{% static 'images/wallet.png' %}" alt=""><a href="{% url "create-deposit" %}">Deposit</a></li>
+                        </div>
+                        <!--
+                        <div class="dash-imgcon101">
+                            <li><img src="{% static 'images/withdraw.png' %}" alt=""><a href="withdraw.html">Withdraw</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="{% static 'images/balance-transfer.png' %}" alt=""><a href="transfer_balance.html">Transfer Balance</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="{% static 'images/transaction.png' %}" alt=""><a href="transactions.html">Transactions</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="{% static 'images/referral.png' %}" alt=""><a href="referral.html">Referrals</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="{% static 'images/ticket.png' %}" alt=""><a href="supportticket.html">Support Ticket</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="{% static 'images/2fa.png' %}" alt=""><a href="">2FA</a></li>
+                        </div>
+                        -->
+                        <div class="dash-imgcon101">
+                            <li><img src="{% static 'images/profile.png' %}" alt=""><a href="{% url "profile" %}">Profile</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="{% static 'images/password.png' %}" alt=""><a href="{% url "change_password" %}">Change Password</a></li>
+                        </div>
+                        <div class="dash-imgcon101">
+                            <li><img src="{% static 'images/logout.png' %}" alt=""><a href="{% url "logout" %}">Logout</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>    
+
+
+
+
+    
+    
+    <main>
+        <header>
+            <div class="menu">
+                <span id="menu" onclick="openMenu()">&#9776;</span>
+            </div>
+    
+            <h2>{{ user.username}} Dashboard</h2>
+            
+            <div class="username">
+                <p>Hello {{user.username}} </p>
+                <i class="fa-solid fa-circle-user fa-2xl" style="color: #3371db;"></i>
+            </div>
+        </header>
+<!-- dashboard ends here -->
+<div class="depconfirm-cont">
+    <div class="depconfirm">
+        <div class="depconfirm-txt">
+            <h1>Deposit Confirmation</h1>
+            <p>Send deposit amount to the below information and submit required proof to the system's admin. The admin will check the request and will match the submitted proof. After verification, if everything is ok, the admin will approve the request and the amount will be deposited to your Deposit Wallet.</p>
+        </div>
+
+        <div class="btcpayment-cont">
+            <div class="btcpayment">
+                <div class="btcpayment1">
+                    <h3>
+                        <i class="fa-solid fa-wallet fa-lg"></i>
+                        {% if deposit.gateway == 'bitcoin' %}
+                        Bitcoin (ERC20) Payment
+                        {% else %}
+                         Ethereum (ERC20) Payment
+                         {% endif %}
+                    </h3>
+                </div>
+                <div class="btcpayment-xt">
+                    <p>You have requested a payment, Please pay 5.00 USD charge for successful payment</p>
+                </div>
+
+                <div class="btcpayment-xt">
+                    <h1>Admin Remembers Wallet Addres GOES HERE</h1>
+                </div>
+                <div class="btcpayment-xt">
+                    <p>Copy Above Bitcoin Address (BTC Address) and pay the amount generated for the system to credit you accordingly.</p>
+                </div>
+                <div class="btcpayment-xt">
+                    <p>N/B: Be mindful of the charge/gas fee to make sure your deposited amount is complete.</p>
+                    {% if deposit.gateway == 'bitcoin' %}
+                    btc-wallet
+                    {% else %}
+                    <p>0x88ad39EEEE0ca095D83AD3bf2f5365E8f540f018</p>
+                    {% endif %}
+                </div>
+                <div class="btcpayment-xt btcpayment-xt111 ">
+                    <h4>Good luck on your Investment!</h4>
+                </div>
+                <div class="btcpayment-xt btcpayment-xt112">
+                    <h4>Submit your Payment Screenshot <span id="asterik">*</span></h4>
+                    <input type="file" required>
+                    <p>Supported mimes: jpg,jpeg,png,pdf,doc,docx</p>
+                </div>
+                <div class="btcpayment-xt btcpayment-xt113">
+                    <a href="{% url "dep-success" deposit.id %}"><button type="submit">Pay Succesful</button></a>
+                </div>
+                <div class="btcpayment-xt"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

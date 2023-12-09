@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<link rel="stylesheet" href="{% static 'login.css' %}">
+
+<body>
+
+    <marquee behavior="" direction="">this is where the prices will display</marquee>
+
+    <main>
+
+    <img src="{% static 'images/logo.png' %}" alt="">
+
+    <div class="login-container">
+
+
+        <h2>Login to your account</h2>
+
+        <p>You can sign in to your account using email or username</p>
+
+        <form class="login-form" method="POST">
+            {% csrf_token %}
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-danger">
+                <strong>Error!</strong> {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+           
+            <div class="form-group">
+                <label for="username" style="margin: 0px; padding-bottom: 5px">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password"style="margin: 0px; padding-bottom: 5px">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-check">
+
+                <div>
+
+                    <input type="checkbox" name="check" id="check">
+
+                    <la5bel for="check">keep me logged in</label>
+
+                </div>  
+
+                <!-- <a href="#">Forgot Password ?</a> -->
+
+            </div>
+            
+            <button type="submit">Submit</button>
+
+            <p>Don't have an account ? <a href="{% url "register" %}">Create Account</a></p>
+
+        </form>
+    </div>
+
+</main>
+
+</body>
+
+<footer>
+    <div class="cookies" id="cookies">
+        <img src="" alt="img">
+
+        <p>We may use cookies or any other tracking technologies 
+            when you visit our website, including any other media 
+            form, mobile website, or mobile application related or 
+            connected to help customize the Site and improve your 
+            experience. <a href="">learn more</a>
+        </p>
+
+        <button id="allow">Allow</button>
+    </div>
+
+</footer>
+<script src="{% static 'script.js' %}"></script>
+</html>

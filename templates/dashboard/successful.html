@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>successful</title>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="maincont">
+        <div class="payment-conttt">
+        <div class="paym-img">
+            <img src="{% static 'images/check-box.png' %}" alt="" srcset="">
+        </div>
+            <h1>Order Received, Processing...</h1>
+            <p id="payment-conttxt">Hi {{user.username}} Thank you for your order. We will process it as soon as possible. You will receive a notification with the details of your order.</p>
+            <p id="detaailsss"><b>Payment details: </b> <br></p>
+            <p id="detaailsss">Amount: ${{ deposit.deposit }} <br></p>
+            <p id="detaailsss">Payment Status: {{ deposit.status }}</p>
+            <p id="detaailsss">Payment Plan: {{ deposit.plan }}</p>
+            <p id="detaailsss">Selected Gateway: {{ deposit.gateway }}</p>
+
+            <a style="padding-top: 50%" href={% url "dashboard" %} id="detaailsss">Back to dashboard</p>
+        </div>
+    </div>
+</body>
+</html>

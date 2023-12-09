@@ -1,0 +1,561 @@
+/* @media only screen and  (max-width:768px) {
+    .triple-cont{
+        flex-direction: column;
+        width: 100%;
+        margin-left: ;
+    }
+
+    .medium .larry img{
+        margin: 40px;
+        width: 380px;
+        margin-left: 70px;
+        margin-top: 50px;
+    }
+
+    .right-card{
+        text-align: center;
+        width: 250px;
+        height: 200px;
+    }
+
+    .right-card h3{
+        padding-left: 60px;
+    }
+
+    .fur-feat{
+        flex-direction: column;
+    }
+
+    .platform-know{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .platwel-img{
+        width: 98%;
+        height: auto;
+        vertical-align: middle;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+        background-color: #00D094;
+    }
+} */
+
+
+@media all and (max-width:320px){
+    @media all and (max-width:768px){
+
+        
+        /* index page starts here */
+
+        .menu,.content{
+            display: block;
+        }
+
+        .coin-headernav nav{
+            display: none;
+        }
+
+      header #dashsty{
+            display: block;
+        }
+
+
+
+        .minimum h1{
+            font-size: 25px;
+        }
+        .minimum p{
+            font-size: 12px;
+        }
+
+        .minimum button a{
+            font-size: 12px;
+            padding: 10px 15px;
+        }
+
+        .minimum{
+            width: 90%;
+        }
+
+        .mini-uu{
+            display: none;
+        }
+
+        .triple-cont{
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .featcoin h1{
+            font-size: 25px;
+        }
+
+        .featcoin p{
+            font-size: 14px;
+        }
+
+        .fur-feat{
+            display: flex;
+            flex-direction: column;
+            align-items:center ;
+            width: 240px;
+            height: 80%;
+            
+        }
+        .furfeat-con{
+            width: 230px;
+            margin-left: 30px;
+            height: 300px;
+        }
+
+        .furfeat-con img{
+            width: 140px;
+        }
+
+        .furfeat-con h5{
+            font-size: 22px;
+        }
+
+        .furfeat-con p{
+            font-size: 12px;
+        }
+
+        .invesst101 h2{
+            font-size: 24px;
+        }
+
+        .invesst101 p{
+            font-size: 14px;
+        }
+
+        .services101 h2{
+            font-size: 25px;
+        }
+        .services101 p{
+            font-size: 14px;
+        } 
+        .commit-container{
+            display: flex;
+            flex-direction: column;
+            width: 280px;
+        }
+
+        .commit-check{
+            width: 280px;
+        }
+        .commit-check h2{
+            font-size: 22px;
+            padding-left: 20px;
+        }
+        .commit-check ul li p{
+            font-size: 12px;
+        }
+
+        .commit-check ul li img{
+            width: 12px;
+        }
+
+        .satisfy img{
+            width: 200px;
+        }
+
+        .platform-wel h2{
+            font-size: 25px;
+        }
+
+        .platform-wel p{
+            font-size: 12px;
+        }
+
+        .platform-know{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .platoon{
+            display: none;
+        }
+
+        .platwel-img{
+            width: 250px;
+        }
+
+        .offermore{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            width:280px ;
+        }
+
+        .offer-cont105{
+            height: 350px;
+        }
+        .offer-cont p{
+            font-size: 12px;
+            
+        }
+
+        .offer-cont h3{
+            font-size: 22px;
+            margin-left: 40px;
+        }
+        .offer-cont{
+            width: 240px;
+            height: 250px;
+            text-align: center;
+        }
+
+
+        .supp-data{
+            height: 400px ;
+        }
+
+        .supp-data:hover{
+            border: none;
+        }
+
+        .profit-cont{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center
+        }
+        .profit-calc input, select{
+            width: 250px;
+        }
+        #amount{
+            width: 200px;
+        }
+
+        .invest-plans{
+            width: 190px;
+            height: 370px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 2px solid transparent;
+            box-shadow: 0px 16px 40px 0px rgba(26, 64, 137, 0.06);
+            border-radius: 16px;
+            z-index: 1;
+            margin: 0px 0px 24px;
+            padding: 30px 0px 20px 20px;
+            padding-top: 30px;
+            padding-right: 60px ;
+            transition: 0.5s;
+            line-height: 2rem;
+        }
+
+       
+        .invest-plans h3{
+            font-family: 'Anek Telugu', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.2em;
+            color: #0c262a;
+            padding-left: 70px;
+        }
+
+        .invest-plans > a >button{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            border: 1px solid #00D094;
+            padding: 10px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color:#fff ;
+            transition: 0.3s;
+            margin-left:40px ;
+        }
+
+        .invest-plans p{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.5em;
+            color: #6b777f;
+            /* margin-left: 50px; */
+        }
+
+        .invest-plans ul li{
+            font-size: 14px;
+        }
+
+        .return-start{
+            font-size: 17px;
+        }
+
+        .left-profit{
+            text-align: start;
+            width: 80%;
+        }
+
+        .left-profit h2{
+            font-size: 28px;
+        }
+
+        .left-profit h3{
+            font-size: 26px;
+        }
+
+        .profit-calc input, select{
+            font-size: 12px;
+            padding: 12px 30px 12px 20px;
+        }
+
+        .slider-cont{
+            width: 280px;
+        }
+        
+        .headslide-txt h2{
+            font-size: 25px;
+            
+        }
+
+        .headslide-txt{
+            text-align: start;
+            align-content: start;
+            margin-right: 30px;
+            width:82%;
+        }
+
+        .headslide-txt p{
+            font-size: 14px;
+        }
+
+        .supp-data p{
+            font-size: 12px;
+        }
+
+        .supp-data p:first-child{
+            font-size: 14px;
+        }
+
+        .supp-data{
+            height: 300px;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .faqs-ans{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 620px;
+        }
+
+        .faqs-ans img{
+            width: 230px;
+            /* display: none; */
+        }
+
+        .footer-cont{
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-left: 17px;
+        }
+
+        .jbcoinpow p{
+            width: 250px;
+        }
+
+
+       .minii-ani{
+        --animate-duration: 3s;
+        width: 50px;
+        display: none;
+       }
+
+
+        .faq-crypto{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .frequent1{
+            width: 230px;
+        }
+
+        .frequent1 h2{
+            font-size: 28px;
+        }
+
+        .cryptoaskd-cont{
+            width: 200px;
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            align-content: start;
+            justify-content: center;
+        
+        } 
+
+        /* abt page starts here */
+        .swedentxt h1{
+            font-size: 32px;
+            width: 200px;
+            padding-bottom: 20px;
+        }
+
+        .swedentxt h3{
+            font-size: 18px;
+        }
+
+        .terms-cont{
+            width: 100%;
+            height: 100%;
+        }
+
+        .body-img img{
+            width: 250px;
+            height: 15vh;
+            margin: 0;
+            padding: 10px 10px;
+        }
+
+        /* createacct page starts here */
+        .createacct-cont{
+            text-align: center;
+            width: 520px;
+            padding: 0;
+        }
+
+        .create-acct{
+            width: 260px !important;
+            padding: 30px 0;
+            margin-left: 15px !important;
+        }
+
+        .create-cont h2{
+            font-size: 18px ;
+        }
+
+        .create-cont p{
+            font-size: 14px;
+        }
+
+        .create-input input{
+            padding:8px 8px !important;
+            font-size: 12px !important;
+        }
+
+        .create-input label{
+            font-size: 14px;
+            text-align: left ;
+            padding-left: 10px;
+        }
+
+        .create-img{
+            margin-bottom: 15px;
+        }
+
+        /* profile page starts here */
+
+        .openticket-cont h1{
+            font-size: 2rem !important;
+            font-weight: 400 !important;
+        }
+
+        .openticket1{
+            width: 240px;
+        }
+
+        .openticket101{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: start;
+            width: 230px;
+        }
+
+        .openticket101 input{
+            padding: 10px 8px;
+            font-size: 12px;
+            width: 60%;
+        }
+
+        .openticket101 label{
+            font-size: 14px;
+        }
+
+        .ticket-detail1111{
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .ticket-detail1111 input{
+            display: inline-flex;
+        }
+
+        .button-icn{
+            padding: 10px 8px !important;
+            width: 60%;
+        }
+
+        /* deposit page starts here */
+
+        .dep-firsttxt{
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .dep_content p{
+            font-size: 14px;
+        }
+
+        .dep_content form select{
+            padding: 10px 10px;
+            width: 80%;
+        }
+
+        .dep-historylnk{
+            margin: 20px 0  !important;
+        }
+
+        /* dep-history page starts here */
+
+        .viewall-txt{
+            line-height: 1.8rem;
+        }
+
+        .support-btn{
+            padding: 10px 13px;
+            font-size: 12px;
+        }
+
+        /* openticket starts here */
+
+        .ticket-detail123 select{
+            width: 100%;
+            padding: 20px 20px 20px 0 ;
+            font-size: 12px;
+        }
+
+        .attach-tick1 p{
+            font-size: 14px !important;
+            font-weight: 400 !important;
+        }
+
+        .attach-tick h3{
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .openticket101 textarea{
+            font-size: 14px;
+            width: 60%;
+            height: 15vh
+        }
+
+        
+
+       
+    }
+}

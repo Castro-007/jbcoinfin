@@ -1,0 +1,488 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinFinance</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'mobilestyle1.css' %}">
+    <script src="{% static 'script.js' %}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="loader ">
+        <img src="{% static 'images/coinerrrrrrr.png' %}" alt="">
+    </div>
+    <header>
+        <div class="coin-headernav">
+            <div class="header-img">
+                <img src="{% static 'images/coinerrrrrrr.png' %}" alt="jbcoinfinance logo" title="JBCOINFINANCE">
+                <!-- <h4>JBCOINFINANCE</h4> -->
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{% url "index" %}">Home</a>
+                        <a href="{% url "about" %}">About Us</a>
+                        <a href="#investment-plans">Investment Plans</a>
+                        <a href="#services-div">Services</a>
+                        <a href="#faqs-div">FAQs</a>
+                        <a href="#">Contact Us</a>
+                       <button id="dashsty"><a href="{% url "dashboard" %}"> Dashboard</a></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <!-- mobile nav -->
+
+    <div id="menu" class="menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="menuclose()">&times;</a>
+        <ul>
+            <li><a href="{% url "index" %}">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#investment-plans">Investment Plans</a></li>
+            <li><a href="#">Affiliates</a></li>
+            <li><a href="#faqs-div">FAQs</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <button id="dashsty"><a href="{% url "dashboard" %}"> Dashboard</a></button>
+        </ul>
+    </div>
+
+    
+    <div class="content">
+        <!-- Menu Button -->
+        <span onclick="menuopen()">&#9776;</span>
+      
+    </div>
+
+    </header>
+
+
+
+    <div class="triple-cont">
+        <div class="minimum">
+            <div class="mini-ani">
+            <img class="mini-ani animate__animated animate__shakeX animate__slow animate__infinite" src="{% static 'images/arrow_up-remov.png' %}" style="opacity: 0.7;" alt="">
+            <img class=" mini-uu animate__animated animate__rotateOut animate__slow animate__infinite" src="{% static 'images/bitcoinroll.png' %}" alt="">
+            </div>
+            <h1>Maximize Your <br>Investment <br> Returns</h1>
+            <p>Anyone can invest money to different currency to increase their earnings by the help of Jbcoinfinance investment plans.</p>
+            <button><a href="{% url "dashboard" %}">Get Started</a></button>
+        </div>
+        <div class="medium">
+            <div class="larry animate__animated animate__shakeY animate__slow animate__infinite">
+            <img src="{% static 'images/bitchart-remov.png' %}" alt="">
+            </div>
+        </div>
+        <div class="maximum">
+            <div class="right-card right1">
+                <h3>10 Years</h3>
+                <h4>Trading Experience</h4>
+            </div>
+            <div class="right-card right2">
+                <h3>24/7</h3>
+                <h4>Online Support</h4>
+            </div>
+            <div class="right-card right1">
+                <h3>25k+</h3>
+                <h4>Satisfied Customer</h4>
+            </div>
+            <div class="animate__animated animate__shakeY animate__slow animate__infinite">
+            <img src="{% static 'images/bitcoindig-removebg-preview.png' %}" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="featcoin">
+            <h1>Features We Have</h1>
+            <p>Hey there! Here are the features we have: user-friendly interface, top- <br>notch security, and fast performance.</p>
+        </div>
+        <div class="featdigcoin">
+        <img src="{% static 'images/bitcoindig-removebg-preview.png' %}" alt="">
+        </div>
+        <div class="fur-feat">
+            <div class="furfeat-con furfeat1">
+                <img src="{% static 'images/real-time.png' %}" alt="realtime image">
+                <h5>Real Time Data</h5>
+                <p>Real-time data is like having a magic crystal ball that tells you what's happening now.</p>
+            </div>
+            <div class="furfeat-con furfeat2">
+                <img src="{% static 'images/customer support.png' %}" alt="customer support">
+                <h5>Customer Support</h5>
+                <p>Hey there! How can I help? Just shoot me a message and I'll get back to you ASAP!</p>
+            </div>
+            <div  class="furfeat-con furfeat3">
+                <img src="{% static 'images/high-sec.png' %}" alt="secured">
+                <h5>Higher Security</h5>
+                <p>With the rising frequency and sophistication of cyber threats, integrating advanced security features into investor systems is best practice.</p>
+            </div>
+            <div class="furfeat-con furfeat4">
+                <img src="{% static 'images/lower-com.png' %}" alt="">
+                <h5>Lower Commission</h5>
+                <p>By implementing a reduced commission model, we believe we can demonstrate our commitment to client success</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="platform-know">
+        
+        <div class="platwel-img">
+            <img class="platwel-first" src="{% static 'images/elijah.png' %}" alt="">
+            <div class="platwel-secnd-cont">
+                <!-- <img class="platwel-secnd" src="{% static 'images/founder johnson.jpg" alt=""> -->
+                <div class="platoon">
+                    <!-- <h3>Elijah Johnson</h3>
+                    <p>Founder</p> -->
+                </div>
+            </div>
+        </div>
+        <div class="platform-wel">
+            <img class="aniplat animate__animated animate__shakeX animate__slow animate__infinite" src="{% static 'images/arrow_up-remov.pn' %}" alt="">
+            <h2>Meet Our Platform To <br> Know More About</h2>
+            <p>Welcome to Jbcoinfinance,Our platform is designed to empower both seasoned investors and newcomers to the world of finance. With a commitment to providing accurate, up-to-date information, insightful analysis, and expert guidance, we aim to be your go-to resource for making informed investment decisions. So what are you waiting for? Let's get started!</p>
+            <button><a href="#">Explore More</a></button>
+        </div>
+    </div>
+
+    <div class="commit-container">
+        <div class="commit-check">
+            <h2>Our Commitment To Help <br> Growing Your Wealth</h2>
+            <ul>
+                <li><img src="{% static 'images/check.png' %}" alt=""><p class="comtxt">Building a Better Trading Future</p></li>
+                <li><img src="{% static 'images/check.png' %}" alt=""><p>Provide a Trading Experience</p></li>
+                <li><img src="{% static 'images/check.png' %}" alt=""><p>The Experts Behind Your Success</p></li>
+                <li><img src="{% static 'images/check.png' %}" alt=""><p>Empowering Traders Worldwide</p></li>
+                
+            </ul>
+        </div>
+        <div class="satisfied-clt">
+            <div class="satisfy">
+                <img src="{% static 'images/barr.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="services" id="services-div">
+        <div class="services101">
+        <h2><span class="green-serv">Services</span> We Offer</h2>
+        <p>We offer the Best services around....</p>
+        </div>
+        <div class="leftservice animate__animated animate__shakeY animate__slow animate__infinite">
+            <img src="{% static 'images/bitcoindig-removebg-preview.png' %}" alt="">
+        </div>
+        <div class="offermore">
+            <div class="offer-cont offer-cont101">
+               <a href=""> <img src="{% static 'images/strategy.png' %}" alt="">
+                <h3>Strategy Consulting</h3>
+                <p>
+                    We provide expert guidance and insight to help investors make informed decisions that align with financial goals</p></a>
+            </div>
+            <div class="offer-cont offer-cont102">
+                <a href=""><img src="{% static 'images/finance-advise.png' %}" alt="">
+                <h3>Financial Advisory</h3>
+                <p>A skilled financial advisory service can be your guiding light in this complex landscape. With tailored advice and expertise, we help investors make well-informed decisions aligned with their goals and risk tolerance.</p></a>
+            </div>
+            <div class="offer-cont offer-cont103">
+               <a href=""> <img src="{% static 'images/manage.png' %}" alt="">
+                <h3>Management</h3>
+                <p>
+                    This involves a systematic approach to effectively oversee and optimize our client's investments activities. This process encompasses several crucial steps</p></a>
+            </div>
+            <div class="offer-cont offer-cont104">
+               <a href=""> <img src="{% static 'images/supply.png' %}" alt="">
+                <h3>Supply Optimization</h3>
+                <p>
+                    supply optimization has emerged as a game-changing strategy to streamline operations and elevate user experiences it enhances the way investments are managed, presented, and accessed on our platform.</p></a>
+            </div>
+            <div class="offer-cont offer-cont105">
+              <a href="">  <img src="{% static 'images/hr-consult.png' %}" alt="">
+                <h3>HR Consulting</h3>
+                <p>
+                    HR consulting serves as the foundation for maximizing human potential. It's not just about managing our clients, it's about unlocking their capabilities to drive investment success.</p></a>
+            </div>
+            <div class="offer-cont offer-cont106">
+              <a href="">  <img src="{% static 'images/market-consult.png' %}" alt="">
+                <h3>Marketing Consulting</h3>
+                <p>
+                    In the competitive world of investments, making informed decisions is crucial. However, even the most strategic investment plans can fall short without effective marketing. That's where our specialized Marketing Consulting services come in.</p></a>
+            </div>
+        </div>
+        <img class="rightani animate__animated animate__rotateOut animate__slow animate__infinite " src="{% static 'images/bitcoinroll.png' %}" alt="">
+        
+    </div>
+
+    <div class="invesst" id="investment-plans">
+        <div class="invesst101">
+        <h2>Our <span class="blue-vest">Investment</span> Plans</h2>
+        <p>We offer the best flexible Investment plans! </p>
+        </div>
+        <!-- <img class="leftinves animate__animated animate__shakeX animate__slow animate__infinite" src="{% static 'images/arrow_up-remov.png" alt=""> -->
+
+        <div class="invesst102">
+            <div class="invest-plans starters">
+                <h3>STARTER PLAN</h3>
+                <p>Return: <span class="return-start">0.7%</span> Every Hour</p>
+                <ul>
+                    <li><img src="{% static 'images/check-box.png' %}" alt="">For 320 Hours</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt="">Total: 224% + Capital</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt=""><span class="min-red" >Min </span>$1,000.00</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt=""><span class="max-green"><span>Max </span>$9,999.00</li>
+                </ul>
+                <a href="{% url "create-deposit" %}"><button>Invest now</button></a>
+            </div>
+            <div class="invest-plans silver">
+                <h3>Silver PLAN</h3>
+                <p>Return: <span class="return-start">1.5%</span> Every Hour</p>
+                <ul>
+                    <li><img src="{% static 'images/check-box.png' %}" alt="">For 320 Hours</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt="">Total: 480% + Capital</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt=""><span class="min-red" >Min </span>$10,000.00</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt=""><span class="max-green"><span>Max </span>$49,999.00</li>
+                </ul>
+                <a href="{% url "create-deposit" %}"><button>Invest now</button></a>
+            </div>
+            <div class="invest-plans Gold">
+                <h3>Gold PLAN</h3>
+                <p>Return: <span class="return-start">2.10%</span> Every Hour</p>
+                <ul>
+                    <li><img src="{% static 'images/check-box.png' %}" alt="">For 720 Hours</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt="">Total: 1512% + Capital</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt=""><span class="min-red" >Min </span>$50,000.00</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt=""><span class="max-green"><span>Max </span>$199,999.00</li>
+                </ul>
+                <a href="{% url "create-deposit" %}"><button>Invest now</button></a>
+            </div>
+            <div class="invest-plans Gold">
+                <h3>VIP PLAN</h3>
+                <p>Return: <span class="return-start">2.5%</span> Every Hour</p>
+                <ul>
+                    <li><img src="{% static 'images/check-box.png' %}" alt="">For 720 Hours</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt="">Total: 1800% + Capital</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt=""><span class="min-red" >Min </span>$200,000.00</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt=""><span class="max-green"><span>Max </span>$499,999.00</li>
+                </ul>
+                <a href="{% url "create-deposit" %}"><button>Invest now</button></a>
+            </div>
+            <div class="invest-plans Gold">
+                <h3>VIP PLATINUM PLAN</h3>
+                <p>Return: <span class="return-start">3%</span> Every Hour</p>
+                <ul>
+                    <li><img src="{% static 'images/check-box.png' %}" alt="">For 720 Hours</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt="">Total: 2160% + Capital</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt=""><span class="min-red" >Min </span> $500,000.00</li>
+                    <li><img src="{% static 'images/check-box.png' %}" alt=""><span class="max-green"><span>Max </span>$1,000,000.00</li>
+                </ul>
+                <a href="{% url "create-deposit" %}"><button>Invest now</button></a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="profit-cont">
+        <div class="left-profit">
+            <h2>Profit <br>Calculator</h2>
+            <h3>Calculate <span class="profit-span">Your<br> Potential</span><br>Earnings</h3>
+        </div>
+        <div class="profit-calc">
+            <form>
+                <div class="invesplan">
+                <label for="name">Investment Plan</label>
+                <select class="select-box" id="selecto-box">
+                    <option value="224">Starter Plan - 0.7% per hour for 320 Hours : Min: $1,000 </option>
+                    <option value="480">Silver Plan - 1.5% per hour for 320 Hours : Min: $10,000</option>
+                    <option value="1512">Gold Plan - 2.10% per hour for 720 Hours : Min: $50,000</option>
+                    <option value="2180">VIP Plan - 2.5% per hour for 720 Hours : Min: $200,000</option>
+                    <option value="2160">VIP Platinum Plan - 3% per hour for 720 Hours : Min: $500,000</option>
+                </select>
+                </div>
+                <div class="invesamoun">
+                <label for="name">Investment Amount</label>
+                <input type="number" id="amount" onchange="Calculate" placeholder="Enter Amount in USD" name="amount">
+                </div>
+                <div class="col-12">
+                    <div>
+                     
+                     <div style="align-items: center;"><h4><font color="#0a4fd5"><div id="result"></div></font> </h4></div>  <div align="center"><h4><font color="#03d392"><div id="result2"></div></font> </h4></div>
+                    </div>
+                  </div>
+                  
+                  <script>
+                    window.addEventListener('load', function () {
+                      var select = document.getElementById('selecto-box');
+                      var amt = document.getElementById('amount');
+                      res1 = document.getElementById("result");
+                      res2 = document.getElementById("result2");
+                      function Calculate(){
+                            var product = select.value * amt.value;
+                            var amtmain = parseInt(amt, 10);
+                            var profit = product/100;
+                            var totalreturn = profit + amtmain;
+                            console.log(totalreturn)
+                            res1.innerHTML = "Total Profit : " + "$"+profit;
+                            res2.innerHTML = "Total Return : $"+profit + " + Capital";
+                        }
+              
+                      var select = document.getElementById("selecto-box");
+                    var amount = document.getElementById("amount");
+                    select.addEventListener("change", Calculate);
+                    amount.addEventListener("input", Calculate);
+                    })
+                  </script>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="slider-cont">
+        <div class="headslide-txt">
+            <h2>Connect with <span class="headslide-txt11">Our Clients</span></h2>
+            <p>We love connecting with our clients to hear about their experiences <br> and how we can improve.</p>
+        </div>
+
+        <div class="clien-supp">
+            <div class="supp-data">
+                <p> I encountered a technical issue and reached out to the support team. Their response was prompt, and they guided me through the solutionstep by step. This level of support is truly commendable </p>
+                <div class="supp-img">
+                    <div class="supp-img22 chengyy">
+                    <img src="{% static 'images/cheng-li.png' %}" alt="">
+                    <div class="supp-txt">
+                        <h3>Cheng Li</h3>
+                        <p>Exceptional Support</p>
+                    </div>
+                    </div>
+                    <img src="{% static 'images/quoteddddd.png' %}" alt="">
+                </div>
+            </div>
+            <div class="supp-data">
+                <p>Security is paramount in trading, and i feel confident in the measures this platform takes to safeguard my data and investments. It's the trustworthiness that keeps me coming back. </p>
+                <div class="supp-img">
+                    <div class="supp-img22 ">
+                    <img src="{% static 'images/james-l.jpg' %}" alt="">
+                    <div class="supp-txt">
+                        <h3>James .L.</h3>
+                        <p>Secure and Reliable</p>
+                    </div>
+                    </div>
+                    <img src="{% static 'images/quoteddddd.png' %}" alt="">
+                </div>
+            </div>
+            <div class="supp-data">
+                <p> I've been trading for years and this platform is hands down one of the best i've used. The real time data and intuitive interface have helped me make informed decisionsand maximize my profits </p>
+                <div class="supp-img">
+                    <div class="supp-img22">
+                    <img src="{% static 'images/sarah-hawk.jpg' %}" alt="">
+                    <div class="supp-txt">
+                        <h3>Sarah Hawkins</h3>
+                        <p>Experienced Trader</p>
+                    </div>
+                    </div>
+                    <img src="{% static 'images/quoteddddd.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="faqs-ans" id="faqs-div">
+        <div class="faq-imgs">
+            <img class="minii-ani animate__animated animate__shakeX animate__slower animate__infinite" src="{% static 'images/bitcoinroll.png' %}" alt="">
+
+            <div class="frequent1">
+                <h2><span>Frequently</span> Asked Questions</h2>
+                <p>Hey there! Got questions? We've got answers. Check out our FAQ page for all <br>the deets. Still not satisfied? Hit us up.</p>
+                
+            </div>
+            <img class="minii-ani animate__animated animate__shakeX animate__slower animate__infinite" src="{% static 'images/arrowwwup.png' %}" alt="">
+        </div>
+
+        <div class="faq-crypto">
+            <div class="cryptoaskd">
+               <div class="cryptoaskkk">
+                <div class="cryptoaskd-cont">
+                    <h3>What is Cryptocurrency?</h3>
+                    <p>Cryptocurrency is a digital asset that uses cryptography to secure and verify transactions and control the creation of new units. <hr></p>
+                </div>
+                <div class="cryptoaskd-cont">
+                    <h3>What is Blockchain Technology?</h3>
+                    <p>Blockchain technology is a decentralized and distributed digital ledger that is used to record transactions across many computers so that the record cannot be altered retroactively without the alteration of all subsequent blocks and the consensus of the network. <hr></p>
+                </div>
+                <div class="cryptoaskd-cont">
+                    <h3>What is Cryptocurrency Wallet?</h3>
+                    <p>A cryptocurrency wallet is a digital wallet that allows you to securely store and manage your cryptocurrencies. <hr></p>
+                </div>
+                <div class="cryptoaskd-cont">
+                    <h3>What is Cryptocurrency Minning?</h3>
+                    <p>Cryptocurrency mining is the process of validating transactions and creating new cryptocurrency coins by solving complex mathematical problems using powerful computers. <hr></p>
+                </div>
+                <div class="cryptoaskd-cont">
+                    <!-- change the domain name here to match the current one -->
+                    <h3>How can i invest in Jbcoinfinance.Com </h3> 
+                    <p>To make a investment you must first become a member of JbCoinfinance.com. Once you are signed up, you can make your first deposit. All deposits must be made through the Members Area. You can login using the member username and password you used when sign up. <hr></p>
+                </div>
+                <div class="cryptoaskd-cont">
+                    <h3>I wish to invest with JbCoinfinance.com But I Dont Have A Cryptocurrency, What Should I Do?</h3>
+                    <p>You can open a free Bitcoin account here: <br>
+                       <a href="https://accounts.binance.info/en/login">Binance</a>  <br>
+                        <a href="https://www.blockchain.com/explorer">Blockchain</a> <br>
+                        or any other cryptocurrency wallet <hr></p>
+                </div>
+               </div>  
+            </div>
+            <div class="cryptoask-img">
+                <img src="{% static 'images/faq.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-cont">
+            <div class="jbcoinpow">
+                <div class="jb-ani animate__animated animate__shakeX animate__slow animate__infinite">
+                    <img  src="{% static 'images/arwup.png' %}" alt="">
+
+                </div>
+                <a href="index.html"><img src="{% static 'images/jblogoA-dark.png' %}" alt=""></a>
+                <p>Jbcoinfinance is your trusted destination for all things investment-related. Our platform is designed to empower both seasoned investors and newcomers to the world of finance.</p>
+                <img class="rightyani animate__animated animate__rotateOut animate__slow animate__infinite" src="{% static 'images/bitcoinroll.png' %}" alt="">
+                </p>
+            </div>
+            <div class="jbcoinlnks">
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Investment Plans</a></li>
+                        <li><a href="">FAQs</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                    </ul>
+                    <div class="footservice animate__animated animate__shakeY animate__slow animate__infinite">
+                        <img src="{% static 'images/bitcoindig-removebg-preview.png' %}" alt="">
+
+                        
+                    </div>
+                    <p class=" mb-0">© 2023 All Rights Reserved By Jbcoinfinance
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
