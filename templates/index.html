@@ -18,10 +18,20 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <style>
+        .coinmarketcap{
+            width: 95%;
+        }
+    </style>
+    <header class="coinmarketcap">
+        <div id="coinmarketcap-widget-marquee" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
+    </header>
 
     <div class="loader ">
         <img src="{% static 'images/coinerrrrrrr.png' %}" alt="">

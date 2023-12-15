@@ -554,6 +554,21 @@
             height: 15vh
         }
 
+        /* investment page starts here */
+
+        .total-invest{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font: maven;
+            
+        }
+
+        .coinmarketcap{
+            width: 95%;
+        }
+
         
 
        

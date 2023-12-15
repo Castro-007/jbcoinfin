@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="{% static 'style2.css' %}">
+<link rel="stylesheet" href="{% static 'mobilestyle1.css' %}">
 <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
@@ -123,6 +124,56 @@
             font-weight: 450;
             font-size: 22px;
         }
+
+        .coinmarketcap{
+            width: 95%;
+        }
+        @media all and (max-width:320px){
+            @media all and (max-width:768px){
+                header h2{
+                    font-size: 1.1rem;
+                    padding-right: 1rem;
+                }
+                
+                .total-invest1{
+                    width: 80%;
+                }
+
+                .invest-profit button{
+                    padding: 5px;
+                    margin-bottom: 3rem;
+                }
+
+                .invest-profit h4{
+                    font-size: 1rem;
+                }
+
+                .invest-profit button a{
+                    font-size: .8rem;
+                }
+
+                .total-invest1{
+                    width: 18rem;
+                    margin-bottom: 3rem;
+                }
+
+                .invest-error{
+                    width: 80%;
+                }
+
+                .invest-error ul li{
+                    margin-right: 2rem;
+                }
+
+                .active-plan h1{
+                   font-size: 1.4rem;
+                }
+
+            
+
+                
+            }
+        }
     </style>
 
     <div class="wrapper">
@@ -206,7 +257,7 @@
  
     
     <main>
-        <header>
+        <header class="coinmarketcap">
             <div id="coinmarketcap-widget-marquee" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
         </header>
         <header>
@@ -264,7 +315,7 @@
         
     </div>
     
-    <div class="active-cont" border="">
+    <div class="active-cont" >
         <div class="active-plan">
             <h1>Active <span class="green-serv" style="color: var(--blue);">Plans</span> </h1>
             <table class="invest-table">
