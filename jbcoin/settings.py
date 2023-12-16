@@ -33,6 +33,8 @@ RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+TAWKTO_ID_SITE = "657db81f07843602b802cc92"
 
 # Application definition
 
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "tawkto",
     "invest"
 ]
 
