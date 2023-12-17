@@ -1031,7 +1031,7 @@ form{
 
 .create-input label{
     text-align: left;
-    margin: 20px 0px 20px 140px;
+    margin: 20px 0px 20px ;
 }
 
 .create-input input{
@@ -1168,6 +1168,12 @@ form{
     border-spacing: 20px 20px;
 }
 
+
+/* register page starts here */
+
+.create-cont{
+    height: 100vh;
+}
 
 
 
