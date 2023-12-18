@@ -42,20 +42,6 @@
 } */
 
 
-@media only screen and (min-width: 321px) and (max-width: 844px) {
-    .menu,.content{
-            display: block;
-        }
-
-        .coin-headernav nav{
-            display: none;
-        }
-
-      header #dashsty{
-            display: block;
-        }
-}
-
 
 @media all and (max-width:320px){
     @media all and (max-width:768px){
