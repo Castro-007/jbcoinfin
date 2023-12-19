@@ -96,8 +96,16 @@
     </div>    
     
     <main>
-        <header>
-            <div id="coinmarketcap-widget-marquee" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
+        <style>
+            .coinmarketcap{
+                z-index: 1;
+            width: 100%;
+            overflow: hidden;
+            
+        }
+        </style>
+        <header class="coinmarketcap" style="width: 100%; overflow: hidden;">
+            <div id="coinmarketcap-widget-marquee" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true" ></div>
         </header>
         <header>
 
@@ -125,7 +133,7 @@
 
             <i>Here is last 30 days statistics of your ROI (Return on Investment)</i>
 
-            <div class="chart">
+            <div class="chart" style="width: 90%;">
 
                 <span>5</span>
                 <span>4</span>
@@ -146,7 +154,7 @@
 
     <footer>
         <div class="cookies" id="cookies">
-            <img src="" alt="img">
+           
 
             <p>We may use cookies or any other tracking technologies 
                 when you visit our website, including any other media 

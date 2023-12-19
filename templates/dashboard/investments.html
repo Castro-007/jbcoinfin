@@ -7,121 +7,81 @@
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="{% static 'style2.css' %}">
+<link rel="stylesheet" href="{% static 'mobilestyle1.css' %}">
 <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
 
     <style>
-        .invest-conttxt{
-            margin:  40px 30px;
-            line-height: 1rem;
+        .coinmarketcap{
+            width: 95%;
+            overflow: hidden;
         }
-        
-        .investement-page{
-            height: 600px;
-        }
-        
-        .invest-cont h2{
-            font: maven;
-            font-size: 30px;
-            font-weight: 500;
-        }
-        
-        .total-invest{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            font: maven;
+        @media all and (max-width:320px){
+            @media all and (max-width:768px){
+                header h2{
+                    font-size: 1.1rem;
+                    padding-right: 1rem;
+                }
+                
+                .total-invest1{
+                    width: 80%;
+                }
+
+                .invest-profit button{
+                    padding: 5px;
+                    margin-bottom: 3rem;
+                }
+
+                .invest-profit h4{
+                    font-size: 1rem;
+                }
+
+                .invest-profit button a{
+                    font-size: .8rem;
+                }
+
+                .total-invest1{
+                    width: 18rem;
+                    margin-bottom: 3rem;
+                }
+
+                .invest-error{
+                    width: 80%;
+                }
+
+                .invest-error ul li{
+                    margin-right: 2rem;
+                }
+
+                .active-plan h1{
+                   font-size: 1.4rem;
+                }
+
+                .active-cont{
+                    width: 95%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+
+                .invest-table tr th {
+                    font-size: 0.8rem;
+                }
+                
+                .invest-table tr td{
+                    font-size: 0.7rem;
+
+                }
+                
+                .active-plan{
+                    padding: 0 10px !important;
+                }
+
             
-        }
-        
-        .total-invest1{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-radius: 5px;
-            background-color: #fff;
-            width: 420px;
-            height: 180px;
-            gap: 25px;
-            flex-basis: 30%;
-        }
-        
-        .dolz-invest{
-            padding: 30px 0;
-            color: #0d6efd;
-        }
-        
-        .invest-profit button{
-            margin-top: 30px;
-            padding: 13px 18px;
-            border: none;
-            border-radius: 5px;
-            background-color: #293860;
-            color: #ffffff;
-            cursor: pointer;
-        }
-        
-        .firstinv-btn{
-            background-color: #5f8ef1 !important;
-        }
-        
-        .invest-profit h4{
-            font-weight: 400;
-            font-size: 18px;
-        }
-        
-        .invest-error{
-            background-color: #ffffff;
-            padding: 20px 5px;
-            border-radius: 5px;
-            width: 520px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
-        .invest-error ul li{
-            list-style: none;
-            margin-top: 10px;
-        }
-        
-        .invest-error ul li a{
-            text-decoration: none;
-            color: black;
-            border-radius: 5px;
-            padding: 3px;
-            font-size: 14px;
-        }
-        
-        .active-cont{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-align: center;
-            width: 90%;
-            
-        }
-        
-        .active-plan{
-            padding: 0 10px;
-        }
-        
-        .active-plan h2{
-            font-weight: 450;
-            font-size: 22px;
-        }
-        
-        .invest-notf{
-            border-radius: 2px;
-            background-color: #ffffff;
-            padding: 15px 5px;
-            width: 80%;
-            margin:10px 0 40px 20px;
-            text-align: center;
-        }
-        .invest-notf h2{
-            font-weight: 450;
-            font-size: 22px;
+
+                
+            }
         }
     </style>
 
@@ -161,7 +121,7 @@
                 <div class="dash-imgcon">
                     <ul>
                         <div class="dash-imgcon101">
-                            <li><img src="{% static 'images/dashboard.png' %}" alt=""><a href="#">Dashboard</a></li>
+                            <li><img src="{% static 'images/dashboard.png' %}" alt=""><a href="{% url "dashboard" %}">Dashboard</a></li>
                         </div>
                         <div class="dash-imgcon101">
                             <li><img src="{% static 'images/investment.png' %}" alt=""><a href="{% url "investment" %}">Investments</a></li>
@@ -206,7 +166,7 @@
  
     
     <main>
-        <header>
+        <header class="coinmarketcap">
             <div id="coinmarketcap-widget-marquee" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
         </header>
         <header>
@@ -264,7 +224,7 @@
         
     </div>
     
-    <div class="active-cont" border="">
+    <div class="active-cont" >
         <div class="active-plan">
             <h1>Active <span class="green-serv" style="color: var(--blue);">Plans</span> </h1>
             <table class="invest-table">

@@ -26,6 +26,7 @@ i{
 }
 
 
+
 header{
     display: flex;
     align-items: center;
@@ -1030,7 +1031,7 @@ form{
 
 .create-input label{
     text-align: left;
-    margin: 20px 0px 20px 140px;
+    margin: 20px 0px 20px ;
 }
 
 .create-input input{
@@ -1168,6 +1169,12 @@ form{
 }
 
 
+/* register page starts here */
+
+.create-cont{
+    height: 100vh;
+}
+
 
 
         /* MEDIA QUERY */
@@ -1178,7 +1185,7 @@ form{
         display: flex;
         flex-flow: row;
         gap: 20px;
-        margin: 0 10px;
+        margin: 10px 10px;
     }
 
     .menu_list{

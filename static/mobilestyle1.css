@@ -42,6 +42,7 @@
 } */
 
 
+
 @media all and (max-width:320px){
     @media all and (max-width:768px){
 
@@ -552,6 +553,21 @@
             font-size: 14px;
             width: 60%;
             height: 15vh
+        }
+
+        /* investment page starts here */
+
+        .total-invest{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font: maven;
+            
+        }
+
+        .coinmarketcap{
+            width: 95%;
         }
 
         

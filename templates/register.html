@@ -10,6 +10,75 @@
 </head>
 <body>
 
+    <style>
+        .create-acct{
+            height: 100vh;
+        }
+
+        .create-input{
+            margin-top: 1vh;
+        }
+
+        .create-input label{
+            display: block;
+        }
+
+        /* .form{
+            height: 180vh;
+        } */
+
+        @media all and (max-width:320px){
+            @media all and (max-width:768px){
+                .create-input{
+                    margin-top: 0.5vh;
+                }
+
+                .create-input label{
+                    display: block;
+                    text-align: left;
+                }
+
+            }
+        }
+
+
+        @media only screen and (min-width: 321px) and (max-width: 844px){
+            .create-input input{
+                width: 42vh;
+                padding: 10px;
+            }
+
+            .create-input{
+                padding: 10px;
+            }
+
+
+
+            .create-acct{
+                margin-left: 4%;
+            }
+
+            form{
+                align-items: flex-start;
+                width: 50vh;
+                margin-top: 4%;
+            }
+
+            .create-check input{
+                width: 25px !important;
+            }
+
+            .create-inputbtn a {
+                margin-left: 10%;
+                align-items: center;
+            }
+            
+        }
+
+
+
+    </style>
+
 
 <div class="createacct-cont">
     <div class="create-acct">
@@ -30,15 +99,7 @@
                 <label for="E-mail"> E-mail <span class="astersk">*</span></label>
                 <input type="email" name="email" id="" required>
             </div>
-            <!--
-            <div class="create-input create-input1">
-                <label for="Country">Country <span class="astersk">*</span></label>
-                <input type="text" name="" id="" required>
-
-                <label for="Mobile Number"> Mobile Number <span class="astersk">*</span></label>
-                <input type="tel" name="" id="" required>
-            </div>
-            -->
+            
             <div class="create-input">
                 <label for="password">Password <span class="astersk">*</span></label>
                 <input type="password" name="password1" id="" required>
@@ -55,7 +116,7 @@
             <div class="create-inputbtn">
                 <a href=""><button type="submit">Create Account</button></a>
             </div>
-            <p>Already have an account? <a href="">Login Account</a></p>
+            <p>Already have an account? <a href="{% url "register" %}">Login Account</a></p>
         </form>
     </div>
 </div>
