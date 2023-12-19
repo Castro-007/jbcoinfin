@@ -1185,7 +1185,7 @@ form{
         display: flex;
         flex-flow: row;
         gap: 20px;
-        margin: 0 10px;
+        margin: 10px 10px;
     }
 
     .menu_list{

@@ -10,7 +10,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <marquee behavior="" direction="">this is where the prices will display</marquee>
+    <style>
+        .coinmarketcap{
+            z-index: 1;
+        width: 100%;
+        overflow: hidden;
+
+        
+    }
+    @media only screen and (min-width: 321px) and (max-width: 844px){
+        .depconfirm{
+            text-align: start;
+            width: 90%;
+            margin-left: 0;
+            padding: 10px;
+            
+        }
+    }
+    </style>
+     <header class="coinmarketcap">
+        <div id="coinmarketcap-widget-marquee" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
+    </header>
     
     <div class="wrapper">
     
