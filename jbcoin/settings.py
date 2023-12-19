@@ -62,17 +62,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_METHODS = (
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
+    "*",
 )
-CORS_ALLOWED_HEADERS = [
-    'Accept',
-    'Content-Type',
-]
+CORS_ALLOW_HEADERS = ['*']
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 
