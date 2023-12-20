@@ -23,9 +23,11 @@ def dashboard(request):
     deposits = Deposit.objects.filter(user=user)
     total_deposits = get_total_invest(list(deposits.values()))
     successful_deposits = Deposit.objects.filter(user=user, status='successful')
+    total_profits = get_total_profit(list(successful_deposits))
     total_successful_deposits = get_total_invest(list(successful_deposits.values()))
     return render(request, 'dashboard/index.html', {'user': user,
                                                     'total_deposits': total_deposits,
+                                                    'total_profits': total_profits,
                                                     'total_successful_deposits': total_successful_deposits})
 
 
@@ -78,6 +80,8 @@ def deposit_init(request):
     total_deposits = get_total_invest(list(deposits.values()))
     successful_deposits = Deposit.objects.filter(user=user, status='successful')
     total_successful_deposits = get_total_invest(list(successful_deposits.values()))
+    total_profits = get_total_profit(list(successful_deposits))
+
     if request.method == "POST":
         form = DepositForm(data=request.POST)
         if form.is_valid():
@@ -96,6 +100,7 @@ def deposit_init(request):
     return render(request, 'dashboard/deposit.html', {'form': form,
                                             'user': user,
                                             'total_deposits': total_deposits,
+                                            'total_profits': total_profits,
                                             'total_successful_deposits': total_successful_deposits,
                                             })
 
@@ -106,10 +111,13 @@ def dep_confirm(request, deposit_id):
     total_deposits = get_total_invest(list(deposits.values()))
     successful_deposits = Deposit.objects.filter(user=user, status='successful')
     total_successful_deposits = get_total_invest(list(successful_deposits.values()))
+    total_profits = get_total_profit(list(successful_deposits))
+
     deposit = get_object_or_404(Deposit, id=deposit_id)
     return render(request, 'dashboard/depo-ethereum.html', {
         'deposit': deposit,
         'total_deposits': total_deposits,
+        'total_profits': total_profits,
         'total_successful_deposits': total_successful_deposits,
         })
 
@@ -129,6 +137,14 @@ def get_total_invest(deposits):
 
     return total_invest
 
+def get_total_profit(deposits):
+    total_profits = 0
+    for deposit in deposits:
+        profit_amount = deposit.get_profit()
+        total_profits += profit_amount
+
+    return total_profits
+
 @login_required(login_url='/login/')
 def investment_stats(request):
     user = request.user
@@ -137,11 +153,13 @@ def investment_stats(request):
     total_deposits = get_total_invest(list(deposits.values()))
     successful_deposits = Deposit.objects.filter(user=user, status='successful')
     total_successful_deposits = get_total_invest(list(successful_deposits.values()))
+    total_profits = get_total_profit(list(successful_deposits))
     total_deposits = get_total_invest(list(deposits.values()))
     return render(request, 'dashboard/investments.html', {'deposits': deposits,
                                                           'total_deposits': total_deposits,
                                                           'user': user,
                                                           'total_deposits': total_deposits,
+                                                          'total_profits': total_profits,
                                                             'total_successful_deposits': total_successful_deposits,
                                                           })
 
@@ -153,6 +171,7 @@ def profile(request):
     total_deposits = get_total_invest(list(deposits.values()))
     successful_deposits = Deposit.objects.filter(user=user, status='successful')
     total_successful_deposits = get_total_invest(list(successful_deposits.values()))
+    total_profits = get_total_profit(list(successful_deposits))
     total_deposits = get_total_invest(list(deposits.values()))
 
     try:
@@ -181,6 +200,7 @@ def profile(request):
                                                       'form': form,
                                                       'form1': form1,
                                                       'total_deposits': total_deposits,
+                                                      'total_profits': total_profits,
                                                         'total_successful_deposits': total_successful_deposits,
                                                       })
 
@@ -191,6 +211,8 @@ def password_change(request):
     deposits = Deposit.objects.filter(user=user)
     total_deposits = get_total_invest(list(deposits.values()))
     successful_deposits = Deposit.objects.filter(user=user, status='successful')
+    total_profits = get_total_profit(list(successful_deposits))
+
     total_successful_deposits = get_total_invest(list(successful_deposits.values()))
     total_deposits = get_total_invest(list(deposits.values()))
 
@@ -208,5 +230,6 @@ def password_change(request):
     return render(request, 'dashboard/password.html', {'user': user,
                                                        'form': form,
                                                        'total_deposits': total_deposits,
+                                                       'total_profits': total_profits,
                                                         'total_successful_deposits': total_successful_deposits,
                                                        })
