@@ -105,7 +105,7 @@
                 </div>
     
                 <div class="btc_balance">
-                    0.00 USD (Interest Wallet)
+                    {{total_profits}} USD (Interest Wallet)
                 </div>
     
                 <div class="transact">
@@ -198,7 +198,7 @@
                 </div>
                 <div class="invest-profit">
                     <h4>Total Profit</h4>
-                    <span class="dolz-invest">$ 0.00</span> <br>
+                    <span class="dolz-invest">${{total_profits}}</span> <br>
                     <a href="dashboard.html"><button><a href="#" style="color: #fff">Withdraw now &RightArrow;</a></button></a>
                 </div>
 
@@ -233,6 +233,7 @@
                     <th>Deposit Amount</th>
                     <th>Gateway</th>
                     <th>Status</th>
+                    <th>Profit</th>
                 </tr>
                 
                 {% for deposit in deposits %}
@@ -241,6 +242,7 @@
                     <td>$ {{ deposit.deposit }}</td>
                     <td>{{ deposit.gateway }}</td>
                     <td>{{ deposit.status }}</td>
+                    <td>{{ deposit.get_profit }} </td>
                 </tr>
                 {% endfor %}
             </table>
