@@ -79,7 +79,7 @@ class Deposit(models.Model):
             seconds_in_hour = 60 * 60
             invest_time_hours = total_seconds / seconds_in_hour
 
-            profit = invest_time_hours * (profit_percent/100)
+            profit = invest_time_hours *  ((profit_percent * int(self.deposit)) / 1000)
             return round(profit, 8)
         
         else:

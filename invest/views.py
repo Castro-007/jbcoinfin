@@ -139,11 +139,15 @@ def get_total_invest(deposits):
 
 def get_total_profit(deposits):
     total_profits = 0
+    total_deposits = 0
     for deposit in deposits:
         profit_amount = deposit.get_profit()
         total_profits += profit_amount
+        deposit_amount = deposit.deposit
+        total_deposits += deposit_amount
 
-    return total_profits
+    total_profits += int(total_deposits)
+    return round(total_profits)
 
 @login_required(login_url='/login/')
 def investment_stats(request):
