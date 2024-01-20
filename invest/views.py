@@ -141,7 +141,7 @@ def get_total_profit(deposits):
     total_profits = 0
     total_deposits = 0
     for deposit in deposits:
-        profit_amount = deposit.get_profit()
+        profit_amount = deposit.profit
         total_profits += profit_amount
         deposit_amount = deposit.deposit
         total_deposits += deposit_amount

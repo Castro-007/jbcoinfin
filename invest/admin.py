@@ -5,7 +5,7 @@ from .models import Deposit, Profile
 
 @admin.register(Deposit)
 class DepositModel(admin.ModelAdmin):
-    list_display = ('user', 'deposit', 'gateway', 'plan', 'status')
+    list_display = ('user', 'deposit', 'gateway', 'plan', 'status', 'profit')
 
 
 @admin.register(Profile)
